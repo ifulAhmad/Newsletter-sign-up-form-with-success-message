@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- Sign-up form start -->
+
+      <div class="main-box">
+        <div class="header">
+          <span> Stay updated!</span>
+        </div>
+
+        <div class="text"><p>Join 60,000+ product managers receiving monthly updates on:</p></div>
+        <div class="list text">
+          <p class="text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+              <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+              </g>
+            </svg>
+            Product discovery and building what matters
+          </p>
+          <p class="text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+              <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+              </g>
+            </svg>
+            Measuring to ensure updates are a success
+          </p>
+          <p class="text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+              <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+              </g>
+            </svg>
+            And much more!
+          </p>
+        </div>
+        <div class="email-box">
+          <span class="email"> Email address</span>
+          <input type="email" placeholder="email@company.com" id="email-input" />
+        </div>
+
+        <button type="submit" id="email-btn">Subscribe to monthly newsletter</button>
+      </div>
+
+      <div class="images">
+        <img src="/assets/images/illustration-sign-up-desktop.svg" />
+      </div>
+      <div class="images-mobile">
+        <img src="/assets/images/illustration-sign-up-mobile.svg" />
+      </div>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <!-- Success message end -->
+    </div>
+    <div class="container-success" id="container-success">
+      <div class="success-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+          <defs>
+            <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+              <stop offset="0%" stop-color="#FF6A3A" />
+              <stop offset="100%" stop-color="#FF527B" />
+            </linearGradient>
+          </defs>
+          <g fill="none">
+            <circle cx="32" cy="32" r="32" fill="url(#a)" />
+            <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
+          </g>
+        </svg>
+
+        <div class="success-head">
+          <span> Thanks for subscribing!</span>
+        </div>
+        <p class="text">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+
+        <button type="submit" id="dismiss-btn">Dismiss message</button>
+      </div>
+    </div>
+
+    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Saiful Islam</a>.</div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+@font-face {
+  font-family: RobotoBold;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+  /* color */
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  /* Primary */
+  --tomato: hsl(4, 100%, 67%);
+  --Light-red-bg: rgba(255, 87, 87, 0.2);
+  --Light-red: rgb(255, 87, 87);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--Charcoal-Grey);
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: var(--White);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+/*  */
+.display {
+  opacity: 0;
+}
+.remove {
+  z-index: 100;
+}
+
+.text {
+  font-size: 16px;
+  margin: 5px 5px;
+}
+
+svg {
+  width: 18px;
+  margin-right: 15px;
+}
+
+.main-box {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-box .header {
+  font-family: RobotoBold, sans-serif;
+  font-size: 2.5rem;
+  margin: 10px;
+}
+
+.main-box .list .text {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+}
+
+.main-box .email {
+  display: flex;
+  flex-direction: column;
+}
+.email-box .spann {
+  color: red;
+  position: absolute;
+  font-size: 12px;
+  bottom: 110px;
+  right: 25px;
+}
+.email-box .email {
+  font-size: 12px;
+  font-family: RobotoBold, sans-serif;
+  margin-top: 30px;
+}
+
+.email-box input {
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.email-box .error {
+  border: 1px solid var(--tomato);
+  background-color: var(--Light-red-bg);
+}
+
+.error::placeholder {
+  color: var(--Light-red);
+}
+.images-mobile {
+  margin-top: 80px;
+  flex: 1;
+  background-size: cover;
+  width: 100%;
+  display: block;
+}
+
+.images img {
+  width: 335px;
+  display: none;
+}
+button {
+  background: var(--Dark-Slate-Grey);
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  color: var(--White);
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background: var(--tomato);
+}
+
+.container-success {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  background: var(--White);
+  align-items: center;
+  /* opacity: 0; */
+}
+.success-box {
+  width: 90%;
+  height: 90%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.success-box .success-head {
+  font-family: RobotoBold, sans-serif;
+  font-size: 3rem;
+}
+.success-box p {
+  font-size: 16px;
+}
+
+.success-box svg {
+  width: 50px;
+}
+
+.attribution {
+  margin-top: 50px;
+}
+
+/* 
+
+
+
+
+
+*/
+/* BREAKPOINT */
+
+/* SMALL */
+@media screen and (min-width: 375px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 0;
+    width: 100%;
+  }
+  .images img {
+    display: none;
+  }
+  .images-mobile img {
+    margin: 70px 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: block;
+  }
+
+  .main-box {
+    padding: 0 25px;
+  }
+  .main-box .header {
+    margin-top: 40px;
+  }
+}
+
+/* MEDIUM */
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    width: 750px;
+    height: 85%;
+    padding: 6px;
+    gap: 10px;
+  }
+  .images-mobile {
+    display: none;
+  }
+  .images {
+    flex: 1;
+    width: 325px;
+    height: 100%;
+  }
+  .images img {
+    display: block;
+    width: 325px;
+  }
+
+  .main-box {
+    flex: 2;
+  }
+  .main-box .header {
+    margin: 40px 0 10px 5px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .main-box .list {
+    margin-top: 10px;
+  }
+  .main-box .list .text {
+    margin: 10px 0;
+  }
+
+  .email span {
+    margin-top: 30px;
+  }
+}
